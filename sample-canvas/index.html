@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Sample</title>
+</head>
+<body>
+  <canvas id="canvas" width="500" height="500" style="border: 1px solid #000;"></canvas>
+  <script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.fillStyle = 'red';
+    ctx.fillRect(50,50,100,100);
+    ctx.fillStyle = '#000';
+    ctx.moveTo(50,50);
+    ctx.lineTo(100,100);
+    ctx.lineTo(20,120);
+    ctx.fill();
+
+    ctx.font = '48px serif';
+    ctx.fillText('Hello world', 100, 500);
+    var img = new Image();
+    img.src = 'https://mdn.mozillademos.org/files/5395/backdrop.png';
+  </script>
+  
+</body>
+</html>
